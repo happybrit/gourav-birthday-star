@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#071329"><meta name="description" content="A real star for Gourav's 25th birthday — Vega, approximately 25.04 light-years from Earth."><title>A Star for Gourav — A Golden Birthday Sky</title>
+<style>
+:root{--night:#081326;--deep:#0b1724;--panel:#101f2a;--ink:#f8f2df;--muted:#c5c4be;--gold:#e5bd65;--gold2:#ffebb0;--line:rgba(245,223,164,.2);--green:#356152;--blue:#3d6b9f;--glass:rgba(11,26,39,.78);color-scheme:dark}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100%;background:var(--night);color:var(--ink);font-family:Georgia,'Times New Roman',serif;overflow-x:hidden}
+body.theme-nature{--night:#081510;--deep:#122a20;--panel:#172c23;--green:#456f4c;--blue:#607e68;--glass:rgba(9,27,20,.79)}
+body.theme-blue{--night:#071329;--deep:#142d52;--panel:#122643;--green:#367384;--blue:#578ac7;--glass:rgba(8,22,48,.8)}
+body.theme-purple{--night:#16081f;--deep:#34124a;--panel:#2b163c;--green:#7e53a8;--blue:#9a6cc8;--glass:rgba(28,11,44,.8)}
+body::before{content:'';inset:0;position:fixed;z-index:-3;pointer-events:none;background:radial-gradient(ellipse 45% 30% at 75% 20%,rgba(222,178,91,.10),transparent),radial-gradient(ellipse 60% 45% at 15% 66%,var(--deep),transparent),linear-gradient(145deg,var(--night),var(--deep) 75%,var(--night))}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}a:focus-visible,button:focus-visible{outline:2px solid var(--gold2);outline-offset:4px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+#sky{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:-1}.s-dot{position:absolute;border-radius:50%;background:#fff6d4;box-shadow:0 0 12px rgba(255,235,176,.65);animation:twinkle var(--dur,6s) ease-in-out infinite;animation-delay:var(--delay,0s);opacity:.5}.firefly{background:#dfc66a;box-shadow:0 0 14px #dfc66a;animation:drift 7s ease-in-out infinite;opacity:.44}
+@keyframes twinkle{0%,100%{opacity:.2;transform:scale(.7)}50%{opacity:.9;transform:scale(1.25)}}@keyframes drift{0%,100%{opacity:.2;transform:translateY(0)}50%{opacity:.65;transform:translateY(-16px)}}
+.topbar{height:76px;position:relative;z-index:10;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding:0 clamp(22px,6vw,110px);background:rgba(5,13,23,.3);backdrop-filter:blur(12px)}.brand{color:var(--gold2);font-size:1.05rem;letter-spacing:.19em}.nav{display:flex;align-items:center;gap:22px;color:#e7ddc7;font:500 .83rem/1.5 system-ui,sans-serif}.nav a:hover{color:var(--gold)}
+main{width:100%;max-width:1600px;margin:0 auto}.hero{min-height:690px;min-height:calc(100svh - 76px);display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:3vw;padding:55px clamp(22px,6vw,110px) 70px}.eyebrow{text-transform:uppercase;color:var(--gold);letter-spacing:.24em;font:600 .72rem system-ui,sans-serif}.hero h1{font-weight:normal;font-size:clamp(3.5rem,7vw,7.3rem);letter-spacing:-.045em;line-height:1.03;margin:24px 0}.hero h1 em{color:var(--gold2);font-style:normal}.hero p.lead{font:400 clamp(1.02rem,1.45vw,1.28rem)/1.85 system-ui,sans-serif;color:#e0dccf;max-width:590px}.date-meta{display:flex;gap:14px;align-items:center;color:#c6c5be;font:500 .78rem system-ui,sans-serif;letter-spacing:.08em;margin-top:35px}.date-meta .bar{height:1px;width:34px;background:var(--gold)}
+.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:15px 22px;font:600 .87rem system-ui,sans-serif;border:1px solid var(--line);transition:transform .25s,border .25s,background .25s;min-height:48px}.btn:hover{transform:translateY(-2px)}.btn-primary{background:linear-gradient(130deg,#ffedb1,#d8a54c);color:#241a0b;border-color:transparent;box-shadow:0 13px 28px rgba(195,153,74,.16)}.btn-outline{background:rgba(220,220,220,.03);color:var(--ink)}
+.artwork{width:100%;aspect-ratio:1/1;position:relative;display:grid;place-items:center;max-height:640px}.artwork .aura{position:absolute;inset:15%;border-radius:50%;background:radial-gradient(circle,rgba(239,199,112,.25),rgba(239,199,112,.05) 36%,transparent 75%);filter:blur(25px);animation:breathe 6s ease-in-out infinite}.artwork .orbit{position:absolute;inset:12%;border:1px solid rgba(235,203,137,.28);border-radius:50%;transform:rotate(-22deg)}.artwork .orbit.secondary{inset:24%;border-color:rgba(189,217,235,.14);transform:rotate(28deg)}.artwork .orbit:after{content:'✧';position:absolute;top:8%;right:23%;color:var(--gold);font-size:28px}.artwork .star-sigil{position:relative;z-index:3;color:#fff0bb;font-size:clamp(6rem,12vw,11rem);text-shadow:0 0 28px #f8d489,0 0 80px rgba(235,201,116,.55);animation:star-float 7s ease-in-out infinite}.artwork .terrain{position:absolute;bottom:0;left:0;right:0;height:35%;pointer-events:none;opacity:.91}.artwork .terrain path.fore{fill:var(--night)}.artwork .terrain path.mid{fill:var(--deep)}.artwork .terrain path.details{stroke:var(--green);fill:none;stroke-width:2;opacity:.65}.artwork .orb-lines{position:absolute;inset:0;opacity:.5}
+.artwork .cosmic-lyra{position:absolute;inset:0;width:100%;height:100%;opacity:.6}.artwork .cosmic-lyra path{stroke:#96c4f3;stroke-width:1;fill:none;stroke-dasharray:4 7}.artwork .cosmic-lyra circle{fill:#fce7ad}.theme-nature .cosmic-lyra{display:none}.theme-blue .terrain{height:24%;opacity:.55}.theme-purple .terrain{height:28%;opacity:.66}
+.art-label{position:absolute;bottom:5%;left:0;right:0;text-align:center;letter-spacing:.23em;text-transform:uppercase;font:500 .69rem system-ui,sans-serif;color:#e9d9ac}
+.section{padding:65px clamp(22px,6vw,110px)}.intro{text-align:center;max-width:850px;margin:0 auto 44px}.section-tag{font:600 .72rem system-ui,sans-serif;color:var(--gold);letter-spacing:.24em;text-transform:uppercase}.section h2{font-size:clamp(2.4rem,4.5vw,4.5rem);font-weight:normal;line-height:1.12;margin:15px 0 17px}.intro p{color:#cbd0cf;font:400 1rem/1.85 system-ui,sans-serif}
+.celestial-card{border:1px solid var(--line);border-radius:28px;background:linear-gradient(150deg,rgba(239,205,137,.07),var(--glass) 35%,rgba(25,64,84,.2));box-shadow:0 30px 90px rgba(0,0,0,.22);overflow:hidden}.reveal-top{text-align:center;padding:48px 32px 43px;background:radial-gradient(ellipse at 50% 5%,rgba(236,193,106,.17),transparent 55%)}.reveal-icon{font-size:5.2rem;color:#ffedac;text-shadow:0 0 35px rgba(240,204,127,.85);animation:star-float 6s infinite ease-in-out;display:block}.reveal-top h3{font-size:clamp(2.4rem,5vw,4.6rem);font-weight:normal;margin:8px 0 4px;color:#ffe9ad}.reveal-top .latin{font:.8rem/1.5 system-ui,sans-serif;letter-spacing:.14em;color:#d4d0c4}.reveal-top p{font:400 clamp(1rem,1.5vw,1.15rem)/1.95 system-ui,sans-serif;max-width:790px;margin:27px auto 0;color:#f0e6d1}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.stat{padding:27px 18px;text-align:center}.stat:not(:last-child){border-right:1px solid var(--line)}.stat label{display:block;color:#adb8b8;text-transform:uppercase;letter-spacing:.16em;font:600 .66rem system-ui,sans-serif;margin-bottom:12px}.stat b{font-weight:normal;font-size:clamp(1.1rem,1.9vw,1.6rem);color:#ffe5a7}.stat small{font:400 .78rem system-ui,sans-serif;color:#bdb7a9;display:block;margin-top:8px}
+.timeline-wrap{padding:42px 32px 39px}.timeline-title{text-align:center;color:#f1dec0;font-size:1.5rem;margin:0 0 29px}.timeline{display:grid;grid-template-columns:1fr 150px 1fr;gap:14px;align-items:center;max-width:790px;margin:auto}.timepoint{padding:15px;border-radius:15px;background:rgba(255,255,255,.035);text-align:center}.timepoint strong{font:600 1.05rem system-ui,sans-serif;color:var(--gold2)}.timepoint span{display:block;color:#c6c3bc;font:400 .81rem/1.7 system-ui,sans-serif;margin-top:8px}.ray{height:1px;background:linear-gradient(90deg,transparent,#f1c677,transparent);position:relative}.ray:after{content:'✦';position:absolute;left:50%;top:50%;transform:translate(-50%,-55%);font-size:1.4rem;color:#ffe5a1}.precision{max-width:790px;color:#b6beb8;font:400 .77rem/1.9 system-ui,sans-serif;margin:23px auto 0;text-align:center}
+.observe{display:grid;grid-template-columns:220px 1fr;gap:45px;align-items:center;padding:42px;border-top:1px solid var(--line)}.qr-plate{background:#fff;padding:12px;border-radius:19px;box-shadow:0 13px 30px rgba(0,0,0,.28)}.qr-plate img{display:block;width:100%;aspect-ratio:1}.observe h3{font-size:2rem;font-weight:normal;color:var(--gold2);margin:0 0 13px}.observe p{font:400 1rem/1.9 system-ui,sans-serif;color:#d1d4cd;max-width:670px}.observe .technical{font:400 .73rem/1.5 system-ui,sans-serif;color:#aab7c0;overflow-wrap:anywhere}.link-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.letter{position:relative;margin:0 clamp(22px,6vw,110px) 88px;padding:clamp(32px,5vw,70px);background:linear-gradient(150deg,rgba(212,184,115,.09),var(--glass));border:1px solid var(--line);border-radius:27px}.letter:before{content:'❦';position:absolute;top:12px;right:27px;font-size:2rem;color:rgba(240,204,132,.45)}.letter h2{font-size:clamp(2rem,3.5vw,3.3rem);color:#ffe7b2;font-weight:normal;margin:12px 0 24px}.letter p{font:400 clamp(1.02rem,1.5vw,1.2rem)/2 system-ui,sans-serif;color:#e9e4d8;max-width:800px}.letter .signature{color:var(--gold2);font-style:italic;margin-top:28px}.footer{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);padding:32px clamp(22px,6vw,110px) 50px;color:#c9c2b0;font:400 .77rem system-ui,sans-serif}.footer a{text-decoration:underline;text-underline-offset:3px}
+@keyframes star-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-11px)}}@keyframes breathe{0%,100%{opacity:.7;transform:scale(.95)}50%{opacity:1;transform:scale(1.06)}}
+#toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,20px);padding:12px 23px;background:#ffefc3;color:#30240f;border-radius:100px;font:600 .85rem system-ui,sans-serif;opacity:0;pointer-events:none;transition:.3s;z-index:30}#toast.on{opacity:1;transform:translate(-50%,0)}
+@media(max-width:950px){.hero{min-height:auto;grid-template-columns:1fr;text-align:center;padding-top:80px}.hero .content{order:1}.hero .artwork{order:2;width:min(100%,530px);margin:0 auto}.hero .lead{margin-left:auto;margin-right:auto}.hero .actions,.date-meta{justify-content:center}.stats{grid-template-columns:repeat(2,1fr)}.stats .stat:nth-child(2){border-right:0}.stats .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:680px){.topbar{height:68px}.nav{gap:12px;font-size:.71rem}.nav .nav-science{display:none}.hero{padding-top:48px;padding-bottom:22px}.hero h1{font-size:clamp(3.2rem,12vw,5rem)}.artwork{max-height:420px}.section{padding-top:58px;padding-bottom:48px}.celestial-card{border-radius:19px}.reveal-top{padding:34px 18px}.reveal-icon{font-size:4rem}.stat{padding:24px 10px}.stat b{font-size:1.15rem}.timeline{grid-template-columns:1fr;gap:20px}.ray{width:50%;justify-self:center}.observe{grid-template-columns:1fr;text-align:center;padding:29px 20px;gap:16px}.qr-plate{width:190px;margin:auto}.link-actions{justify-content:center}.observe .technical{font-size:.67rem}.footer{justify-content:center;text-align:center}.art-label{font-size:.61rem}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition:none!important}}
+
+/* Single-page star-shaped theme switch */
+.topbar{position:sticky;top:0;z-index:40}
+.theme-toggle{
+  position:relative;width:56px;height:56px;display:grid;place-items:center;
+  padding:3px;background:transparent;border:0;line-height:1;
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation;
+}
+.theme-toggle svg{overflow:visible;cursor:pointer;filter:drop-shadow(0 0 9px rgba(241,201,113,.34));transition:transform .35s ease,filter .35s ease}
+.theme-toggle:hover svg{transform:rotate(20deg) scale(1.08);filter:drop-shadow(0 0 17px rgba(248,207,113,.7))}
+.theme-toggle:active svg{transform:rotate(32deg) scale(.94)}
+.theme-toggle:focus-visible{outline:2px solid var(--gold2);outline-offset:0;border-radius:50%}
+.theme-toggle::after{content:attr(data-tip);position:absolute;top:calc(100% + 4px);right:0;background:#13243a;border:1px solid var(--line);padding:8px 10px;border-radius:8px;white-space:nowrap;font:600 .7rem system-ui,sans-serif;color:#ffe9ad;opacity:0;transform:translateY(-5px);pointer-events:none;transition:.15s}
+.theme-toggle:hover::after,.theme-toggle:focus-visible::after{opacity:1;transform:translateY(0)}
+body.theme-blue .firefly{display:none}
+body.theme-blue .artwork .aura{background:radial-gradient(circle,rgba(126,180,255,.24),rgba(239,199,112,.08) 42%,transparent 76%)}
+body.theme-blue .artwork .star-sigil{text-shadow:0 0 24px #f8d489,0 0 85px rgba(100,167,255,.52)}
+body.theme-blue .cosmic-lyra{opacity:.85}
+body.theme-purple .firefly{display:none}
+body.theme-purple .artwork .aura{background:radial-gradient(circle,rgba(201,151,255,.24),rgba(239,199,112,.08) 42%,transparent 76%)}
+body.theme-purple .artwork .star-sigil{text-shadow:0 0 24px #f8d489,0 0 85px rgba(177,114,255,.5)}
+body.theme-purple .cosmic-lyra{opacity:.86}
+body.theme-purple .cosmic-lyra path{stroke:#c9a8ff}
+body.theme-purple .cosmic-lyra circle{fill:#f7e6b0}
+body.theme-nature .letter:before{content:'❦'}
+body.theme-blue .letter:before{content:'✧'}
+body.theme-purple .letter:before{content:'✦'}
+body.theme-blue .celestial-card{background:linear-gradient(155deg,rgba(93,144,224,.15),var(--glass) 35%,rgba(16,45,83,.42))}
+body.theme-purple .celestial-card{background:linear-gradient(155deg,rgba(140,95,224,.16),var(--glass) 35%,rgba(72,26,112,.42))}
+body.theme-blue .topbar{background:rgba(4,13,34,.55)}
+body.theme-purple .topbar{background:rgba(19,8,35,.58)}
+body.theme-blue .art-label{color:#c5d9f5}
+body.theme-purple .art-label{color:#e7d4ff}
+@media(max-width:680px){.theme-toggle{width:52px;height:52px}.theme-toggle svg{width:43px;height:43px}.nav{gap:10px}}
+@media(prefers-reduced-motion:reduce){.theme-toggle svg{transition:none}}
+</style></head>
+<body class="theme-blue"><div id="sky" aria-hidden="true"></div>
+<header class="topbar">
+  <a class="brand" href="#top" aria-label="Back to top">G ✦ A</a>
+  <nav class="nav" aria-label="Page navigation">
+    <a class="nav-science" href="https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Vega" target="_blank" rel="noopener noreferrer">Science ↗</a>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to gold and nature theme" aria-pressed="true" title="Switch to gold and nature theme" data-tip="Change theme">
+      <svg viewBox="0 0 64 64" width="46" height="46" aria-hidden="true" focusable="false">
+        <defs><linearGradient id="switchGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff6cb"/><stop offset=".55" stop-color="#f4cc74"/><stop offset="1" stop-color="#be8d38"/></linearGradient></defs>
+        <path d="M32 3.5 39.8 22.8 60.5 24.1 44.8 37.6 49.9 57.7 32 46.9 14.1 57.7 19.2 37.6 3.5 24.1 24.2 22.8Z" fill="url(#switchGold)" stroke="#fff4cf" stroke-width="1.4" stroke-linejoin="round"/>
+        <circle cx="32" cy="32" r="3.1" fill="#fff9de"/>
+      </svg>
+    </button>
+  </nav>
+</header>
+<main><section class="hero" id="top"><div class="content"><div class="eyebrow">19 October 2026 · A Golden Birthday Star</div><h1>Happy Birthday,<br><em>Gourav.</em></h1><p class="lead">For your twenty-fifth birthday, I chose something that connects the quiet beauty of nature with the wonder of the night sky: a real star, about twenty-five light-years away. A small golden reminder of how far a little light can travel.</p><div class="date-meta"><span>19 OCT 2001</span><span class="bar"></span><span>19 OCT 2026</span><span class="bar"></span><span>25 YEARS</span></div><div class="actions"><a class="btn btn-primary" href="#gift">✦ Reveal your star</a><a class="btn btn-outline" href="https://stellarium-web.org/skysource/Vega" target="_blank" rel="noopener noreferrer">✧ Watch Vega in the sky ↗</a></div></div><div class="artwork" aria-hidden="true">
+<div class="aura"></div><div class="orbit"></div><div class="orbit secondary"></div>
+<svg class="cosmic-lyra" viewBox="0 0 500 500"><path d="M93 134 173 86 242 144 295 272 381 310 351 411"/><circle cx="93" cy="134" r="3"/><circle cx="173" cy="86" r="4"/><circle cx="242" cy="144" r="3"/><circle cx="295" cy="272" r="4"/><circle cx="381" cy="310" r="3"/><circle cx="351" cy="411" r="3"/></svg>
+<div class="star-sigil">✦</div>
+<svg class="terrain" viewBox="0 0 600 210" preserveAspectRatio="none"><path class="mid" d="M0 161 Q65 80 135 160 Q208 65 290 151 Q390 70 474 145 Q550 81 600 149 V210 H0Z"/><path class="fore" d="M0 193 Q135 133 265 190 Q405 142 600 186 V210 H0Z"/><path class="details" d="M61 204 V118 m-23 20 23-24 22 22 m-39 17 17-16 14 16 M510 200 V85 m-40 38 40-31 39 37 m-58 20 19-23 24 17 M220 202 V132 m-28 14 28-24 30 28 M398 198 V137 m-27 19 27-25 27 23"/></svg>
+<div class="art-label">A light between earth &amp; sky</div>
+</div></section>
+<section class="section" id="gift"><div class="intro"><div class="section-tag">A little part of the universe, for you</div><h2>Meet your birthday star.</h2><p>Not a star to own, but a real one to remember. A light chosen because its journey through space almost matches your twenty-five years on Earth.</p></div>
+<article class="celestial-card"><div class="reveal-top"><span class="reveal-icon" aria-hidden="true">✦</span><h3>VEGA</h3><div class="latin">ALPHA LYRAE · HD 172167 · HIP 91262</div><p>Among the countless lights in our sky, Vega feels wonderfully fitting: its light travels for about 25 years before reaching Earth. You turn 25 today, and that coincidence gives this star a place in your birthday story.</p></div>
+<div class="stats"><div class="stat"><label>Distance</label><b>≈ 25.04 ly</b><small>About 25 years of light-travel</small></div><div class="stat"><label>Constellation</label><b>Lyra</b><small>The Lyre</small></div><div class="stat"><label>Spectral class</label><b>A0 V</b><small>Blue-white star</small></div><div class="stat"><label>Coordinates (J2000)</label><b>18h 36m 56s</b><small>+38° 47′ 01″</small></div></div>
+<div class="timeline-wrap"><h3 class="timeline-title">A journey of light</h3><div class="timeline"><div class="timepoint"><strong>October 2001</strong><span>Near the time your story began, this starlight was on its way.</span></div><div class="ray" aria-hidden="true"></div><div class="timepoint"><strong>19 October 2026</strong><span>That light reaches Earth as you celebrate your 25th birthday.</span></div></div><p class="precision">Scientific note: Vega is approximately 25.04 ± 0.07 light-years away. Light arriving today left roughly in early October 2001, but the exact day is uncertain. The golden artistic star represents your favourite colour; Vega itself appears blue-white.</p></div>
+<div class="observe" id="observe"><a class="qr-plate" href="https://stellarium-web.org/skysource/Vega" target="_blank" rel="noopener noreferrer" aria-label="Watch Vega directly in the Stellarium interactive sky map"><img alt="Scan to watch Vega directly in the Stellarium Web sky map" src="data:image/png;base64,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" width="220" height="220"></a><div><span class="section-tag">The star is real</span><h3>See Vega for yourself.</h3><p>Scan the QR code or select Watch Vega to jump straight into an interactive sky map focused on the real star. Pan, zoom and explore the constellation Lyra. The separate SIMBAD link provides the scientific record.</p><div class="link-actions"><a class="btn btn-primary" href="https://stellarium-web.org/skysource/Vega" target="_blank" rel="noopener noreferrer">✧ Watch Vega in Stellarium ↗</a><a class="btn btn-outline" href="https://simbad.cds.unistra.fr/simbad/sim-id?Ident=Vega" target="_blank" rel="noopener noreferrer">Vega in SIMBAD ↗</a><button class="btn btn-outline" type="button" data-copy-link>Copy Vega viewing link</button></div><p class="technical">QR / viewing link: https://stellarium-web.org/skysource/Vega</p></div></div>
+</article></section>
+<section class="letter" aria-labelledby="letter-title"><span class="section-tag">A few words, just for you</span><h2 id="letter-title">A birthday wish.</h2><p>Some gifts can be held in your hands; others belong to a moment. I wanted to give you a piece of wonder — a real star above the trees, and a warm thought to accompany it. May the year ahead bring you peaceful places, bright discoveries, and reasons to keep looking up. Happy Birthday, Gourav.</p><p class="signature">With warm wishes, <br>— Anis</p></section>
+</main><footer class="footer"><div>For Gourav · 19 October 2026 · A Golden Birthday Star</div><a href="https://stellarium-web.org/skysource/Vega" target="_blank" rel="noopener noreferrer">Watch Vega in the sky ↗</a></footer><div id="toast" role="status" aria-live="polite"></div>
+<script>
+(()=>{
+  'use strict';
+  let seed=20011019;
+  const rnd=()=>((seed=(seed*1664525+1013904223)>>>0)/4294967296);
+  const sky=document.getElementById('sky');
+  if(sky){for(let i=0;i<100;i++){let el=document.createElement('i');el.className='s-dot';let s=rnd()>.92?3:1.6;el.style.cssText=`width:${s}px;height:${s}px;left:${(rnd()*100).toFixed(1)}%;top:${(rnd()*100).toFixed(1)}%;--dur:${(3+rnd()*6).toFixed(1)}s;--delay:${(-rnd()*8).toFixed(1)}s`;sky.append(el)}for(let i=0;i<12;i++){let el=document.createElement('i');el.className='s-dot firefly';el.style.cssText=`width:3px;height:3px;left:${(rnd()*100).toFixed(1)}%;top:${(55+rnd()*38).toFixed(1)}%;--delay:${(-rnd()*8).toFixed(1)}s`;sky.append(el)}}
+  let toastTimer;
+  const toast=document.getElementById('toast');
+  function notice(t){if(!toast)return;toast.textContent=t;toast.classList.add('on');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('on'),2400)}
+  document.querySelectorAll('[data-copy-link]').forEach(el=>el.addEventListener('click',async()=>{
+    const url='https://stellarium-web.org/skysource/Vega';
+    try { if(navigator.clipboard&&window.isSecureContext)await navigator.clipboard.writeText(url);
+      else {const t=document.createElement('textarea');t.value=url;t.style.position='fixed';document.body.append(t);t.select();const success=document.execCommand('copy');t.remove();if(!success)throw new Error('copy unavailable')}
+      notice('Vega link copied ✦');
+    } catch {notice('Open the direct Vega link instead');}
+  }));
+
+  // Switch palette without navigation or reload. Retain on refresh when storage is available.
+  const themeButton=document.getElementById('themeToggle');
+  const themeMeta=document.querySelector('meta[name="theme-color"]');
+  const storageKey='gourav-star-golden-theme';
+  const themes=['blue','nature','purple'];
+  const themeInfo={
+    blue:{meta:'#071329',title:'Golden blue is active. Click the star to switch to gold and nature.'},
+    nature:{meta:'#081510',title:'Golden nature is active. Click the star to switch to purple and gold.'},
+    purple:{meta:'#16081f',title:'Purple gold is active. Click the star to switch to golden blue.'}
+  };
+  function nextTheme(theme){return themes[(themes.indexOf(theme)+1)%themes.length]}
+  function applyBodyTheme(theme){
+    document.body.classList.toggle('theme-blue',theme==='blue');
+    document.body.classList.toggle('theme-nature',theme==='nature');
+    document.body.classList.toggle('theme-purple',theme==='purple');
+  }
+  function setTheme(theme,persist=false){
+    if(!themes.includes(theme))theme='blue';
+    applyBodyTheme(theme);
+    const info=themeInfo[theme];
+    const next=nextTheme(theme);
+    const labelMap={blue:'Switch to gold and nature theme',nature:'Switch to purple and gold theme',purple:'Switch to blue and gold theme'};
+    if(themeButton){themeButton.setAttribute('aria-label',labelMap[theme]);themeButton.setAttribute('title',labelMap[theme]);themeButton.setAttribute('data-tip',labelMap[theme]);themeButton.setAttribute('aria-pressed',String(theme==='blue'));}
+    if(themeMeta)themeMeta.setAttribute('content',info.meta);
+    if(persist){try{localStorage.setItem(storageKey,theme)}catch(_){}}
+    return next;
+  }
+  let initialTheme='blue';
+  try{const saved=localStorage.getItem(storageKey);if(themes.includes(saved))initialTheme=saved}catch(_){}
+  setTheme(initialTheme);
+  if(themeButton)themeButton.addEventListener('click',()=>{
+    let current=themes.find(t=>document.body.classList.contains('theme-'+t))||'blue';
+    const next=setTheme(nextTheme(current),true);
+    const active=themes.find(t=>document.body.classList.contains('theme-'+t))||'blue';
+    const toastMap={blue:'Golden Blue ✦',nature:'Golden Nature ✦',purple:'Purple Gold ✦'};
+    notice(toastMap[active]);
+  });
+
+})();
+</script></body></html>
